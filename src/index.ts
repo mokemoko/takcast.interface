@@ -136,14 +136,6 @@ export declare interface ISource {
    */
   type:string|string[];
   /**
-   * 選択部の表示
-   */
-  refPaletteComponent():React.ComponentClass<{
-    onClick:Function,
-    href:string,
-    active:boolean,
-    name:string}>
-  /**
    * 音声node参照
    */
   refAudioNode?():AudioNode;
@@ -160,6 +152,20 @@ export declare interface ISource {
    * @param どのmediaに対するものか指定
    */
   refInfo(mediaPlugin:IMediaPlugin):ISourceInfo;
+  /**
+   * 表示要素参照
+   * audioタグのデータは映像要素参照には含まれず、audioNodeにも含まれない
+   * でも再生コントロールはほしいので、このdisplayElementを準備してみた。
+   */
+  refDisplayElement():HTMLMediaElement|HTMLImageElement|HTMLCanvasElement;
+  /**
+   * 音量を調整する
+   */
+  setVolume(volume:number):void;
+  /**
+   * 音量を参照する
+   */
+  getVolume():number;
 }
 
 /**
