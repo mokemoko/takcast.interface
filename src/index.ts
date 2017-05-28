@@ -37,6 +37,11 @@ export declare interface IBasePlugin extends IPlugin {
    * 破棄用node参照
    */
   refDevnullNode():AudioNode;
+  /**
+   * electron動作であるか判定する
+   * webとしてアクセスしても動作可能にする場合に利用したい。
+   */
+  isElectron():boolean;
 }
 
 /**
