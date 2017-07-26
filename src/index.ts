@@ -170,6 +170,14 @@ export declare interface ISource {
    * 音量を参照する
    */
   getVolume():number;
+  /**
+   * 左パレット部へのsource要素撤去時
+   */
+  onComponentWillUnmount?():void;
+  /**
+   * 左パレット部へのsource要素追加時
+   */
+  onComponentDidMount?(element:HTMLElement):void;
 }
 
 /**
