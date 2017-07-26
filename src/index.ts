@@ -159,10 +159,9 @@ export declare interface ISource {
   refInfo(mediaPlugin:IMediaPlugin):ISourceInfo;
   /**
    * 表示要素参照
-   * audioタグのデータは映像要素参照には含まれず、audioNodeにも含まれない
-   * でも再生コントロールはほしいので、このdisplayElementを準備してみた。
+   * paletteの部分に表示される要素はhtmlのelementならなんでもOKとしてみたいと思う。
    */
-  refDisplayElement():HTMLMediaElement|HTMLImageElement|HTMLCanvasElement;
+  refDisplayElement():HTMLElement;
   /**
    * 音量を調整する
    */
