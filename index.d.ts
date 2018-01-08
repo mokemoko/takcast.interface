@@ -78,9 +78,9 @@ export interface IMediaPlugin extends IPlugin {
      */
     onRemoveSource(source: ISource): void;
     /**
-     * 合成結果の映像canvas参照
+     * 合成結果の映像参照
      */
-    refCanvas(): HTMLCanvasElement;
+    refCanvas(): HTMLImageElement | HTMLCanvasElement | HTMLVideoElement;
     /**
      * 合成結果の音声node参照
      */
